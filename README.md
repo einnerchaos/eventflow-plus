@@ -2,6 +2,8 @@
 
 **Event-driven automation and processing platform** — ingest events, evaluate rules, execute actions asynchronously (webhooks, email hooks, notifications).
 
+**Repository:** [github.com/einnerchaos/eventflow-plus](https://github.com/einnerchaos/eventflow-plus)
+
 Stack: **NestJS · TypeScript · PostgreSQL · Prisma · Redis · BullMQ · Vue 3** (admin UI).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -113,7 +115,7 @@ Use `frontend/.env` or Vite proxy as needed so the UI talks to `http://localhost
 
 ## Tests & CI
 
-**Tip:** run `npm install` in the repo root and **commit `package-lock.json`** (and the same under `frontend/` when you add one) so CI and collaborators get identical dependency trees.
+Lockfiles (`package-lock.json` in the root and in `frontend/`) are committed so CI uses **`npm ci`** for reproducible installs.
 
 ```bash
 npm test              # Unit tests (Jest)
