@@ -270,8 +270,7 @@ async function retryExecution(id: string) {
   }
 }
 
-function viewDetails(execution: Execution) {
-}
+function viewDetails(_execution: Execution) {}
 
 function prevPage() {
   if (page.value > 1) {

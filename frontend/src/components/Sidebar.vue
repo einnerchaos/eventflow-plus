@@ -25,7 +25,7 @@
           @click.prevent="navigateTo(item.path)"
           :class="[
             'flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer',
-            $route.path === item.path
+            route.path === item.path
               ? 'bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/20 text-primary-600 dark:text-primary-400'
               : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
           ]"
@@ -57,7 +57,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { storeToRefs } from 'pinia'
 import {
   HomeIcon,
   BoltIcon,
@@ -66,14 +65,12 @@ import {
   ServerStackIcon,
   ChartBarIcon,
   ArrowLeftOnRectangleIcon,
-  Bars3Icon,
 } from '@heroicons/vue/24/outline'
 import { useAuthStore } from '../stores/auth'
 
 const route = useRoute()
 const router = useRouter()
 const authStore = useAuthStore()
-const { isDark } = storeToRefs(authStore)
 
 const mobileMenuOpen = ref(false)
 

@@ -23,6 +23,7 @@ import { QueueModule } from './queue/queue.module';
 import { WorkersModule } from './workers/workers.module';
 import { WebhooksModule } from './webhooks/webhooks.module';
 import { AdminModule } from './admin/admin.module';
+import { HealthModule } from './health/health.module';
 
 // Middleware
 import { RequestIdMiddleware } from './middleware/request-id.middleware';
@@ -78,6 +79,8 @@ import { RequestIdMiddleware } from './middleware/request-id.middleware';
     RedisModule,
     MetricsModule,
     LoggerModule,
+
+    HealthModule,
 
     // ==========================================
     // FEATURE MODULES

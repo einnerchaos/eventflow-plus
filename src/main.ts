@@ -108,17 +108,6 @@ async function bootstrap() {
   }
 
   // ==========================================
-  // HEALTH CHECK ENDPOINT
-  // ==========================================
-  app.getHttpAdapter().get('/health', (req, res) => {
-    res.json({
-      status: 'healthy',
-      timestamp: new Date().toISOString(),
-      version: process.env.npm_package_version || '1.0.0',
-    });
-  });
-
-  // ==========================================
   // METRICS ENDPOINT
   // ==========================================
   const metricsEnabled = configService.get('METRICS_ENABLED', true) as boolean;
