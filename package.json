@@ -35,7 +35,7 @@
     "@nestjs/swagger": "^7.2.0",
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/passport": "^10.0.3",
-    "@nestjs/bullmq": "^10.1.0",
+    "@nestjs/bullmq": "^11.0.4",
     "passport-headerapikey": "^1.2.2",
     "bullmq": "^4.17.0",
     "ioredis": "^5.3.2",
